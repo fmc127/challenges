@@ -21,7 +21,6 @@
 // return the longest word
 // call the function in a console.log() with the string as the argument
 
-
 function findLongestWordLength(str) {
   const newArray = str.split(' ')
   let longestWord = 0
@@ -36,5 +35,39 @@ function findLongestWordLength(str) {
   return longestWord
 }
 
-
 console.log(findLongestWordLength("Fear urged him to go back, but growth drove him on"))
+
+//================================================================
+
+// practicing making classes
+
+function Guitar(id, make, model, color) {
+    this.id = id
+    this.make = make
+    this.model = model
+    this.color = color
+    this.effect = function(){
+      return "distortion"
+    }
+  }
+  
+  Guitar.prototype.addStrings = function(strings) {
+    this.strings = strings
+  }
+  
+  Guitar.prototype.addPickups = function(pickups) {
+    this.pickups = pickups
+  }
+  
+  const guitar1 = new Guitar(1, "Schecter", "Damien Elite", "maroon, black, clear glaze")
+  // const guitar2 = new Guitar(2,)
+  
+  // console.log(guitar1)
+  // console.log(guitar1.__proto__.__proto__)
+  
+  console.log(guitar1.effect())
+  
+  console.log(guitar1.addStrings("nickle plated"))
+  console.log(guitar1)
+
+  //================================================================
