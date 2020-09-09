@@ -38,3 +38,5 @@ function findLongestWordLength(str) {
 
 
 console.log(findLongestWordLength("Fear urged him to go back, but growth drove him on"))
+
+// testing
