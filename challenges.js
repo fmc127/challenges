@@ -1,4 +1,6 @@
-// This file will be for storing coding challenges
+// This file will be for coding challenges and random practice problems
+
+//=======================================================================
 
 // Find the longest word LENGTH in an array
 
@@ -41,7 +43,7 @@ console.log(findLongestWordLength("Fear urged him to go back, but growth drove h
 
 //=======================================================================
 
-// Practice class
+// Practice class that I used to experiment with adding values to the class using prototype
 
 function Guitar(id, make, model, color) {
   this.id = id
@@ -62,13 +64,35 @@ Guitar.prototype.addPickups = function(pickups) {
 }
 
 const guitar1 = new Guitar(1, "Schecter", "Damien Elite", "maroon, black, clear glaze")
-// const guitar2 = new Guitar(2,)
+const guitar2 = new Guitar(2, "Gibson", "Les Paul", "orange, white" )
 
-// console.log(guitar1)
+console.log(guitar1)
+console.log(guitar2)
 // console.log(guitar1.__proto__.__proto__)
 
 console.log(guitar1.effect())
 
 console.log(guitar1.addStrings("nickle plated"))
 console.log(guitar1)
-// test
+
+//=======================================================================
+
+// Every once in a while I like to make small for loops like this just to practice different ways of observing recursion
+// One way I do this by adding the console.log() with a string and `i` because the output is straight forward
+// the output clearly states that 'we are currently in the loop, and this is the # iteration' 
+// this has helped me better grasp recursion
+
+for(let i = 0; i < 5; i++) {
+    console.log('in loop: ', i)
+  }
+  console.log('loop finished')
+  
+// another small for loop to iterate through an array and returning each index
+
+  const names = ['shaun', 'mario', 'luigi']
+  
+  for(let i = 0; i < names.length; i++){
+    console.log(names[i])
+  }
+
+//=======================================================================
