@@ -71,3 +71,4 @@ console.log(guitar1.effect())
 
 console.log(guitar1.addStrings("nickle plated"))
 console.log(guitar1)
+// test
