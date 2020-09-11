@@ -79,7 +79,7 @@ console.log(guitar1)
 
 // Every once in a while I like to make small for loops like this just to practice different ways of observing recursion
 // One way I do this by adding the console.log() with a string and `i` because the output is straight forward
-// the output clearly states that 'we are currently in the loop, and this is the # iteration' 
+// the output clearly states that 'we are currently in the loop, and this is the #th iteration' 
 // this has helped me better grasp recursion
 
 for(let i = 0; i < 5; i++) {
@@ -96,3 +96,47 @@ for(let i = 0; i < 5; i++) {
   }
 
 //=======================================================================
+
+// this is a freecodecamp challenge
+
+// the goal is to truncate a string, which is given as the first argument, if it is longer than the given maximum string length, which is given as the second argument
+// input: string, number
+// output: string
+
+// first we want to look for edge cases (conditions that automatically return). Edge cases arent neccessarily pointed out so we need to know what to look for
+// in this case, according to the instructions on FCC, if the length of the string is less than or equal to the number, return the string. These are two different edge cases that we can do solo or combine into one if statement. Examples of both are shown below, with the obsolete statement commented out
+
+// we know we have to be able to count the length of the string, which means we need to turn it into an array
+// we need to intitialize a variable to store the new array
+// to know how many indexes are in the new array, we need to loop through it
+// we can use a loop that checks if the length of the array is longer than the number argument
+// if that condition is true, the loop will remove an index from the array
+// once the length of the array is not longer than the number argument, we will convert the array back into a string and store it in a new variable
+// finally the string will be returned
+
+
+function truncateString(str, num) {
+  if(str.length <= num){
+    return str
+  }
+  // added the <= operator to the above edge case so we didnt need to use the below if statement. The top one checks for both conditions while the below only checks for one
+  // if(str.length === num){
+  //   return str
+  // }
+  let strArray = str.split('')
+  // console.log(strArray)
+  while(strArray.length > num){
+    strArray.pop()
+  }
+  strNew = strArray.join('')
+  strNew = strNew + '...'
+  // console.log(strNew)
+  // console.log(strArray)
+  return strNew;
+  
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// input: string / number
+// output: string
