@@ -138,5 +138,51 @@ function truncateString(str, num) {
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
-// input: string / number
-// output: string
+//=================================================================
+
+// input is a string, number
+// output is a string
+// edge case: if we give a negative number as an argument, we can return something right away
+// repeat a string (first argument) a specified number of times (second argument)
+// since there is a number being given as an argument, we will need to use a loop to multiply the given string
+// initialize a new variable as an empty string to use to store the repeated string values after each iteration
+// return the new variable outside of the loop
+
+function repeatStringNumTimes(str, num) {
+  let multipleStr = ''
+  if(num < 0){
+    return ''
+  }
+  for(let i = 0; i < num; i++){
+    // console.log(i)
+    multipleStr += str
+  }
+  console.log(multipleStr)
+  return multipleStr
+}
+
+repeatStringNumTimes("abc", 3);
+
+//=================================================================
+
+
+// input: array
+// output: array
+
+// the goal is to return only the even numbers in an array
+// create an array of numbers
+// we will need to iterate through the whole length of the array to search for the indexes that meet out condition, so we will use a for loop
+// we need to check if the array's indexes are even. How can we do that?
+// the % operator can be used to see if the remainder of the index values is equal to zero
+// if that condition is met, then we will push that index to a new, empty array that we initialized
+
+const arrOfNumbers = [1,2,3,50,4,5,6,162,7,8,27,9,0,2]
+
+let newArr = []
+for(let i = 0; i < arrOfNumbers.length; i++){
+  if(arrOfNumbers[i] % 2 === 0) {
+   newArr.push(arrOfNumbers[i])
+  }
+}
+console.log(newArr)
+// arrOfNumbers[0]
