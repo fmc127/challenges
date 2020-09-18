@@ -186,3 +186,35 @@ for(let i = 0; i < arrOfNumbers.length; i++){
 }
 console.log(newArr)
 // arrOfNumbers[0]
+
+//=================================================================
+
+// The goal is to 
+
+// input: array, array, number
+// output: array
+
+// since we are not supposed to modify arr1 and arr2, we need a new array to store our final value in
+// because 5 and everything after it is after the given index, we know they have to be moved over to make room for the first array. These will be the ending values in our final array
+// We need to store these values into a new variable ** we want to name this variable properly so we know that is contains the ending value of our final array **
+// now we need to store the beginning value of our final array in a new variable
+// at this point, the empty array we initialized at the beginning will be used to store the final value
+// we need to concatinate the beginning value with arr1 and the ending value
+// return the new array
+
+function frankenSplice(arr1, arr2, n) {
+  let newArr = []
+  let endingValue = arr2.slice(n)
+  // console.log(endingValue)
+  // newArr = newArr.splice
+  // console.log(newArr)
+  let beginVal = arr2.slice(0, n)
+  // console.log(beginVal)
+  newArr = beginVal.concat(arr1, endingValue)
+  console.log(newArr)
+  return newArr;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+//=================================================================
