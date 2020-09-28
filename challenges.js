@@ -171,7 +171,7 @@ repeatStringNumTimes("abc", 3);
 
 // the goal is to return only the even numbers in an array
 // create an array of numbers
-// we will need to iterate through the whole length of the array to search for the indexes that meet out condition, so we will use a for loop
+// we will need to iterate through the whole length of the array to search for the indexes that meet our condition, so we will use a for loop
 // we need to check if the array's indexes are even. How can we do that?
 // the % operator can be used to see if the remainder of the index values is equal to zero
 // if that condition is met, then we will push that index to a new, empty array that we initialized
@@ -189,7 +189,10 @@ console.log(newArr)
 
 //=================================================================
 
-// The goal is to 
+// You are given two arrays and an index.
+// Copy each element of the first array into the second array, in order.
+// Begin inserting elements at index n of the second array.
+// Return the resulting array. The input arrays should remain the same after the function runs.
 
 // input: array, array, number
 // output: array
@@ -218,3 +221,4 @@ function frankenSplice(arr1, arr2, n) {
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 //=================================================================
+
