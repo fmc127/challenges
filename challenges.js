@@ -27,10 +27,10 @@
 function findLongestWordLength(str) {
   const newArray = str.split(' ')
   let longestWord = 0
-  for(let i = 0; i < newArray.length; i++){
-        // console.log(newArray.length)
-        // console.log(newArray[i].length)
-    if(newArray[i].length > longestWord){
+  for (let i = 0; i < newArray.length; i++) {
+    // console.log(newArray.length)
+    // console.log(newArray[i].length)
+    if (newArray[i].length > longestWord) {
       longestWord = newArray[i].length
     }
   }
@@ -50,21 +50,21 @@ function Guitar(id, make, model, color) {
   this.make = make
   this.model = model
   this.color = color
-  this.effect = function(){
+  this.effect = function () {
     return "distortion"
   }
 }
 
-Guitar.prototype.addStrings = function(strings) {
+Guitar.prototype.addStrings = function (strings) {
   this.strings = strings
 }
 
-Guitar.prototype.addPickups = function(pickups) {
+Guitar.prototype.addPickups = function (pickups) {
   this.pickups = pickups
 }
 
 const guitar1 = new Guitar(1, "Schecter", "Damien Elite", "maroon, black, clear glaze")
-const guitar2 = new Guitar(2, "Gibson", "Les Paul", "orange, white" )
+const guitar2 = new Guitar(2, "Gibson", "Les Paul", "orange, white")
 
 console.log(guitar1)
 console.log(guitar2)
@@ -82,18 +82,18 @@ console.log(guitar1)
 // the output clearly states that 'we are currently in the loop, and this is the #th iteration' 
 // this has helped me better grasp recursion
 
-for(let i = 0; i < 5; i++) {
-    console.log('in loop: ', i)
-  }
-  console.log('loop finished')
-  
+for (let i = 0; i < 5; i++) {
+  console.log('in loop: ', i)
+}
+console.log('loop finished')
+
 // another small for loop to iterate through an array and returning each index
 
-  const names = ['shaun', 'mario', 'luigi']
-  
-  for(let i = 0; i < names.length; i++){
-    console.log(names[i])
-  }
+const names = ['shaun', 'mario', 'luigi']
+
+for (let i = 0; i < names.length; i++) {
+  console.log(names[i])
+}
 
 //=======================================================================
 
@@ -116,7 +116,7 @@ for(let i = 0; i < 5; i++) {
 
 
 function truncateString(str, num) {
-  if(str.length <= num){
+  if (str.length <= num) {
     return str
   }
   // added the <= operator to the above edge case so we didnt need to use the below if statement. The top one checks for both conditions while the below only checks for one
@@ -125,7 +125,7 @@ function truncateString(str, num) {
   // }
   let strArray = str.split('')
   // console.log(strArray)
-  while(strArray.length > num){
+  while (strArray.length > num) {
     strArray.pop()
   }
   strNew = strArray.join('')
@@ -133,7 +133,7 @@ function truncateString(str, num) {
   // console.log(strNew)
   // console.log(strArray)
   return strNew;
-  
+
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
@@ -150,10 +150,10 @@ truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
 function repeatStringNumTimes(str, num) {
   let multipleStr = ''
-  if(num < 0){
+  if (num < 0) {
     return ''
   }
-  for(let i = 0; i < num; i++){
+  for (let i = 0; i < num; i++) {
     // console.log(i)
     multipleStr += str
   }
@@ -176,12 +176,12 @@ repeatStringNumTimes("abc", 3);
 // the % operator can be used to see if the remainder of the index values is equal to zero
 // if that condition is met, then we will push that index to a new, empty array that we initialized
 
-const arrOfNumbers = [1,2,3,50,4,5,6,162,7,8,27,9,0,2]
+const arrOfNumbers = [1, 2, 3, 50, 4, 5, 6, 162, 7, 8, 27, 9, 0, 2]
 
 let newArr = []
-for(let i = 0; i < arrOfNumbers.length; i++){
-  if(arrOfNumbers[i] % 2 === 0) {
-   newArr.push(arrOfNumbers[i])
+for (let i = 0; i < arrOfNumbers.length; i++) {
+  if (arrOfNumbers[i] % 2 === 0) {
+    newArr.push(arrOfNumbers[i])
   }
 }
 console.log(newArr)
@@ -222,3 +222,45 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 //=================================================================
 
+console.clear()
+
+
+// create a function that takes in a string, converts it to an array, reverses the string, then joins the reversed string
+function isPalindrome(str) {
+
+  // initialize a variable with the result of splitting the string
+  let splitString = str.split("")
+  console.log(splitString)
+
+  // initialize a variable with the result of reversing the array
+  let reversedArray = splitString.reverse()
+  console.log(reversedArray)
+
+  // initialize a variable with the result of joining the reversed array
+  let joinedArray = reversedArray.join("")
+  console.log(joinedArray)
+
+  // return the joined array
+  return joinedArray
+
+}
+
+// call the function!
+isPalindrome('microwave')
+
+// Just messing around with some bizzfuzz
+let JonMcCoy = []
+
+for (let i = 0; i <= 100; i++) {
+  if ((i % 3 === 0) && (i % 5 === 0)) {
+    JonMcCoy.push('JonMcCoy')
+  } else if (i % 3 === 0) {
+    JonMcCoy.push('Jon')
+  } else if (i % 5 === 0) {
+    JonMcCoy.push('McCoy')
+  } else {
+    JonMcCoy.push(i)
+  }
+}
+
+console.log(JonMcCoy)
